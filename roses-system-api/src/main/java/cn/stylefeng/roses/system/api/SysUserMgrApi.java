@@ -15,8 +15,6 @@
  */
 package cn.stylefeng.roses.system.api;
 
-import cn.stylefeng.roses.core.reqres.request.RequestData;
-import cn.stylefeng.roses.core.reqres.response.ResponseData;
 import cn.stylefeng.roses.system.api.entity.SysUser;
 import cn.stylefeng.roses.system.api.model.SysUserInfo;
 import org.springframework.web.bind.annotation.*;

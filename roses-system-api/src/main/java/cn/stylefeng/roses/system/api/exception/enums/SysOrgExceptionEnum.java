@@ -9,16 +9,16 @@ import cn.stylefeng.roses.kernel.model.exception.AbstractBaseExceptionEnum;
  * @author wangzhongqiang
  * @data 2018/4/19 9:22
  */
-public enum SysUserExceptionEnum implements AbstractBaseExceptionEnum {
+public enum SysOrgExceptionEnum implements AbstractBaseExceptionEnum {
 
-    ACCOUNT_IS_EXIST(1110, "帐号已存在！"),
-    NOT_EXISTED(1111, "密码格式不正确(密码必须包含英文大、小写和数字三种)！"),
-    NEEDED_ATTR_NULL(1112, "用户必填属性不能为空"),
-    WRONG_STATUS(1113, "状态错误！"),
-    USER_IS_NOT_EXIST(1113, "用户不存在！");
+    ORG_IS_EXIST(1210, "组织机构已存在！"),
+    NEEDED_ATTR_NULL(1211, "必填属性不能为空"),
+    WRONG_STATUS(1212, "状态错误！"),
+    ORG_IS_NOT_EXIST(1213, "组织机构不存在！"),
+    EXIST_USER(1214, "机构内存在人员，无法删除！");
 
 
-    SysUserExceptionEnum(int code, String message) {
+    SysOrgExceptionEnum(int code, String message) {
         this.code = code;
         this.message = message;
     }

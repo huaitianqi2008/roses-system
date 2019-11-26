@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.SysPermissionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.api.entity.SysPermission">
+        <id column="ID" property="id" />
+        <result column="PERMISSION_CODE" property="permissionCode" />
+        <result column="NAME" property="name" />
+        <result column="MODUEL_NAME" property="moduelName" />
+        <result column="MODUEL_CODE" property="moduelCode" />
+        <result column="PERMISSION_TYPE" property="permissionType" />
+        <result column="DESC" property="desc" />
+        <result column="CREATE_TIME" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, PERMISSION_CODE, NAME, MODUEL_NAME, MODUEL_CODE, PERMISSION_TYPE, DESC, CREATE_TIME
+    </sql>
+
+</mapper>

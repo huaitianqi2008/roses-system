@@ -24,6 +24,7 @@ import cn.stylefeng.roses.kernel.jwt.utils.JwtTokenUtil;
 import cn.stylefeng.roses.kernel.logger.util.LogUtil;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import cn.stylefeng.roses.system.api.context.LoginUser;
+import cn.stylefeng.roses.system.api.entity.SysOrg;
 import cn.stylefeng.roses.system.api.entity.SysUser;
 import cn.stylefeng.roses.system.api.exception.enums.AuthExceptionEnum;
 import cn.stylefeng.roses.system.api.factory.UserFactory;
@@ -43,8 +44,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static cn.stylefeng.roses.system.api.exception.enums.AuthExceptionEnum.USER_NOT_FOUND;
-import static cn.stylefeng.roses.system.api.exception.enums.SysUserExceptionEnum.ACCOUNT_IS_EXIST;
-import static cn.stylefeng.roses.system.api.exception.enums.SysUserExceptionEnum.NEEDED_ATTR_NULL;
+import static cn.stylefeng.roses.system.api.exception.enums.SysUserExceptionEnum.*;
 
 /**
  * <p>
@@ -63,6 +63,7 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
+    private SysOrgService sysOrgService;
     /**
      * 用户登录，登录成功返回token
      *
@@ -157,17 +158,16 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
 
     /**
      * 新增系统管理员
+     *
      * @param sysUser
      */
     public Boolean addSysUser(SysUser sysUser) {
-        if(ToolUtil.isOneEmpty(sysUser,sysUser.getAccount(),
+        if (ToolUtil.isOneEmpty(sysUser, sysUser.getAccount(),
                 sysUser.getPassword(),
                 sysUser.getPhone(),
-                sysUser.getTelphone(),
                 sysUser.getRealName(),
                 sysUser.getLeaderName(),
-                sysUser.getOrgId(),
-                sysUser.getOrgName())){
+                sysUser.getOrgId())) {
             throw new ServiceException(NEEDED_ATTR_NULL);
         }
 
@@ -177,9 +177,17 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
         } catch (Exception e) {
             throw new ServiceException(AuthExceptionEnum.INVALID_PWD);
         }*/
+        //验证部门是否存在
+        SysOrg sysOrg = sysOrgService.getById(sysUser.getOrgId());
+        if(sysOrg ==null){
+            throw new ServiceException(USER_IS_NOT_EXIST);
+        }
+
+        sysUser.setOrgName(sysOrg.getOrgName());
+
         //判断用户是否已存在
-        SysUser existUser = this.getOne(new QueryWrapper<SysUser>().eq("account",sysUser.getAccount()));
-        if(existUser!=null){
+        SysUser existUser = this.getOne(new QueryWrapper<SysUser>().eq("account", sysUser.getAccount()));
+        if (existUser != null) {
             throw new ServiceException(ACCOUNT_IS_EXIST);
         }
 
@@ -188,32 +196,34 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
         sysUser.setSalt(salt);
 
         //根据盐和用户设置密码生成sha256加密密码
-        sysUser.setPassword(Sha256Util.getSHA256(sysUser.getPassword()+ salt));
+        sysUser.setPassword(Sha256Util.getSHA256(sysUser.getPassword() + salt));
 
-       return this.save(sysUser);
+        return this.save(sysUser);
     }
 
     /**
      * 更新系统管理员
+     *
      * @param sysUser
      */
     public Boolean updateSysUser(SysUser sysUser) {
-        if(ToolUtil.isOneEmpty(sysUser,sysUser.getUserId())){
+        if (ToolUtil.isOneEmpty(sysUser, sysUser.getUserId())) {
             throw new ServiceException(NEEDED_ATTR_NULL);
         }
 
         SysUser oldSysUser = this.getById(sysUser.getUserId());
-        if(oldSysUser ==null){
+        if (oldSysUser == null) {
             throw new ServiceException(USER_NOT_FOUND);
         }
 
-        oldSysUser = UserFactory.editUser(sysUser,oldSysUser);
+        oldSysUser = UserFactory.editUser(sysUser, oldSysUser);
 
         return this.updateById(oldSysUser);
     }
 
     /**
      * 获取系统管理员列表
+     *
      * @param page
      * @param sysUserInfo
      * @return
@@ -233,26 +243,28 @@ public class SysUserService extends ServiceImpl<SysUserMapper, SysUser> {
 
     /**
      * 更新系统用户（学员）状态
+     *
      * @param userId
      * @param status
      */
     public Boolean updateUserStatus(Long userId, Integer status) {
 
         SysUser sysUser = this.getById(userId);
-        if(sysUser ==null){
+        if (sysUser == null) {
             throw new ServiceException(USER_NOT_FOUND);
         }
         sysUser.setStatus(status);
-       return this.updateById(sysUser);
+        return this.updateById(sysUser);
     }
 
     /**
-     *删除系统用户（学员）
+     * 删除系统用户（学员）
+     *
      * @param userId
      */
     public Boolean deleteUser(Long userId) {
         SysUser sysUser = this.getById(userId);
-        if(sysUser ==null){
+        if (sysUser == null) {
             throw new ServiceException(USER_NOT_FOUND);
         }
         sysUser.setStatus(UserStatus.DELETE.getCode());

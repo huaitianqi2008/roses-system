@@ -40,7 +40,6 @@ nbdist/
 
 *.log
 tmp/
-=======
 # Compiled class file
 *.class
 

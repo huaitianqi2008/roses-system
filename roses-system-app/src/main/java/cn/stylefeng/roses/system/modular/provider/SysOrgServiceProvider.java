@@ -79,7 +79,7 @@ public class SysOrgServiceProvider implements SysOrgMgrApi {
      * @Date 2019/11/25 下午12:36
      */
     @PostMapping(name = "获取系统管理员列表", path = "/getOrgList")
-    public List<SysUserInfo> getOrgList(@RequestBody SysOrgInfo sysOrgInfo, @RequestParam("pageNo") Integer pageNo,
+    public List<SysOrgInfo> getOrgList(@RequestBody SysOrgInfo sysOrgInfo, @RequestParam("pageNo") Integer pageNo,
                                             @RequestParam("pageSize") Integer pageSize) {
         return this.sysOrgService.getOrgList(new Page(pageNo, pageSize), sysOrgInfo);
 

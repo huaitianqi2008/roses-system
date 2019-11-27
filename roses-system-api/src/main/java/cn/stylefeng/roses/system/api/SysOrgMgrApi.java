@@ -71,7 +71,7 @@ public interface SysOrgMgrApi {
      * @Date 2019/11/25 下午5:18
      */
     @PostMapping(value = "/getOrgList")
-    List<SysUserInfo> getOrgList(@RequestBody SysOrgInfo sysOrgInfo, @RequestParam("pageNo") Integer pageNo,
+    List<SysOrgInfo> getOrgList(@RequestBody SysOrgInfo sysOrgInfo, @RequestParam("pageNo") Integer pageNo,
                                  @RequestParam("pageSize") Integer pageSize);
 
 

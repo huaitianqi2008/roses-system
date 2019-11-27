@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -25,6 +26,7 @@ import static cn.stylefeng.roses.system.api.exception.enums.SysOrgExceptionEnum.
  * @author Hyer
  * @since 2019-11-26
  */
+@Service
 public class SysOrgService extends ServiceImpl<SysOrgMapper,SysOrg> {
 
     public Boolean addOrg(SysOrg sysOrg) {

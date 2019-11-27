@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.CourseProvinceStuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.CourseProvinceStu">
+        <id column="id" property="id" />
+        <result column="stu_id" property="stuId" />
+        <result column="stu_name" property="stuName" />
+        <result column="course_id" property="courseId" />
+        <result column="get_score" property="getScore" />
+        <result column="get_score_time" property="getScoreTime" />
+        <result column="create_time" property="createTime" />
+        <result column="learn_percent" property="learnPercent" />
+        <result column="latest_learn_time" property="latestLearnTime" />
+        <result column="exam_times" property="examTimes" />
+        <result column="is_del" property="isDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, stu_id, stu_name, course_id, get_score, get_score_time, create_time, learn_percent, latest_learn_time, exam_times, is_del
+    </sql>
+
+</mapper>

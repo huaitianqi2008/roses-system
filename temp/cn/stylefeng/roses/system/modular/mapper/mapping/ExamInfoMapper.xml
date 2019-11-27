@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.ExamInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.ExamInfo">
+        <id column="id" property="id" />
+        <result column="creater" property="creater" />
+        <result column="exam_name" property="examName" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="exam_time" property="examTime" />
+        <result column="exam_type" property="examType" />
+        <result column="course_id" property="courseId" />
+        <result column="class_id" property="classId" />
+        <result column="is_publish_result" property="isPublishResult" />
+        <result column="is_publish" property="isPublish" />
+        <result column="create_time" property="createTime" />
+        <result column="pass_score" property="passScore" />
+        <result column="is_del" property="isDel" />
+        <result column="is_reexam" property="isReexam" />
+        <result column="total_score" property="totalScore" />
+        <result column="exam_score" property="examScore" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, creater, exam_name, begin_time, end_time, exam_time, exam_type, course_id, class_id, is_publish_result, is_publish, create_time, pass_score, is_del, is_reexam, total_score, exam_score
+    </sql>
+
+</mapper>

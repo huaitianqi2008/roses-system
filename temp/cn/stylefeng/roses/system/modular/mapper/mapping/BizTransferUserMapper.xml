@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.BizTransferUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.BizTransferUser">
+        <id column="id" property="id" />
+        <result column="stu_id" property="stuId" />
+        <result column="stu_name" property="stuName" />
+        <result column="org_id" property="orgId" />
+        <result column="org_name" property="orgName" />
+        <result column="apply_org_id" property="applyOrgId" />
+        <result column="apply_org_name" property="applyOrgName" />
+        <result column="apply_time" property="applyTime" />
+        <result column="check_status" property="checkStatus" />
+        <result column="checker" property="checker" />
+        <result column="check_time" property="checkTime" />
+        <result column="check_content" property="checkContent" />
+        <result column="is_del" property="isDel" />
+        <result column="creater" property="creater" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, stu_id, stu_name, org_id, org_name, apply_org_id, apply_org_name, apply_time, check_status, checker, check_time, check_content, is_del, creater
+    </sql>
+
+</mapper>

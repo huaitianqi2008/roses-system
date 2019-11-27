@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.TrainInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.TrainInfo">
+        <id column="id" property="id" />
+        <result column="train_name" property="trainName" />
+        <result column="project_id" property="projectId" />
+        <result column="project_train_id" property="projectTrainId" />
+        <result column="period" property="period" />
+        <result column="train_way" property="trainWay" />
+        <result column="train_type" property="trainType" />
+        <result column="enroll_start_time" property="enrollStartTime" />
+        <result column="enroll_end_time" property="enrollEndTime" />
+        <result column="train_start_time" property="trainStartTime" />
+        <result column="train_end_time" property="trainEndTime" />
+        <result column="train_score" property="trainScore" />
+        <result column="enroll_way" property="enrollWay" />
+        <result column="organizer" property="organizer" />
+        <result column="train_days" property="trainDays" />
+        <result column="max_train_num" property="maxTrainNum" />
+        <result column="train_org" property="trainOrg" />
+        <result column="introduce" property="introduce" />
+        <result column="org_id" property="orgId" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+        <result column="train_object" property="trainObject" />
+        <result column="train_status" property="trainStatus" />
+        <result column="train_address" property="trainAddress" />
+        <result column="detail_address" property="detailAddress" />
+        <result column="is_off_job" property="isOffJob" />
+        <result column="is_use_wx" property="isUseWx" />
+        <result column="is_publish" property="isPublish" />
+        <result column="is_del" property="isDel" />
+        <result column="checker" property="checker" />
+        <result column="check_status" property="checkStatus" />
+        <result column="check_time" property="checkTime" />
+        <result column="check_content" property="checkContent" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, train_name, project_id, project_train_id, period, train_way, train_type, enroll_start_time, enroll_end_time, train_start_time, train_end_time, train_score, enroll_way, organizer, train_days, max_train_num, train_org, introduce, org_id, creater, create_time, train_object, train_status, train_address, detail_address, is_off_job, is_use_wx, is_publish, is_del, checker, check_status, check_time, check_content
+    </sql>
+
+</mapper>

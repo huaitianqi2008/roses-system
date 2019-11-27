@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.PlanClassMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.PlanClass">
+        <id column="id" property="id" />
+        <result column="plan_id" property="planId" />
+        <result column="train_name" property="trainName" />
+        <result column="train_cost" property="trainCost" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="eco_source" property="ecoSource" />
+        <result column="org_name" property="orgName" />
+        <result column="create_time" property="createTime" />
+        <result column="is_del" property="isDel" />
+        <result column="is_used" property="isUsed" />
+        <result column="creater" property="creater" />
+        <result column="main_org_id" property="mainOrgId" />
+        <result column="train_object" property="trainObject" />
+        <result column="plan_trian_num" property="planTrianNum" />
+        <result column="is_contain_leader" property="isContainLeader" />
+        <result column="check_status" property="checkStatus" />
+        <result column="checker" property="checker" />
+        <result column="check_time" property="checkTime" />
+        <result column="seq" property="seq" />
+        <result column="update_content" property="updateContent" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, plan_id, train_name, train_cost, begin_time, end_time, eco_source, org_name, create_time, is_del, is_used, creater, main_org_id, train_object, plan_trian_num, is_contain_leader, check_status, checker, check_time, seq, update_content, update_time
+    </sql>
+
+</mapper>

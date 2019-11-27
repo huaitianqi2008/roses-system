@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.Audit（废弃）Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.Audit（废弃）">
+        <id column="id" property="id" />
+        <result column="audit_type" property="auditType" />
+        <result column="applicant_id" property="applicantId" />
+        <result column="check_user_id" property="checkUserId" />
+        <result column="check_time" property="checkTime" />
+        <result column="content" property="content" />
+        <result column="status" property="status" />
+        <result column="is_del" property="isDel" />
+        <result column="up_user_id" property="upUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, audit_type, applicant_id, check_user_id, check_time, content, status, is_del, up_user_id
+    </sql>
+
+</mapper>

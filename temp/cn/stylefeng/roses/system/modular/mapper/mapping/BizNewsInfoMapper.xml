@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.BizNewsInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.BizNewsInfo">
+        <id column="id" property="id" />
+        <result column="news_type" property="newsType" />
+        <result column="news_title" property="newsTitle" />
+        <result column="news_content" property="newsContent" />
+        <result column="creater_name" property="createrName" />
+        <result column="look_num" property="lookNum" />
+        <result column="is_publish" property="isPublish" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+        <result column="check_status" property="checkStatus" />
+        <result column="checker" property="checker" />
+        <result column="check_content" property="checkContent" />
+        <result column="check_time" property="checkTime" />
+        <result column="is_del" property="isDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, news_type, news_title, news_content, creater_name, look_num, is_publish, creater, create_time, check_status, checker, check_content, check_time, is_del
+    </sql>
+
+</mapper>

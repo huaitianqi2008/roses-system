@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.SysOrgMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.SysOrg">
+        <id column="id" property="id" />
+        <result column="org_name" property="orgName" />
+        <result column="sort" property="sort" />
+        <result column="parent_id" property="parentId" />
+        <result column="parent_ids" property="parentIds" />
+        <result column="grade" property="grade" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+        <result column="updater" property="updater" />
+        <result column="update_time" property="updateTime" />
+        <result column="remarks" property="remarks" />
+        <result column="is_del" property="isDel" />
+        <result column="is_real_exist" property="isRealExist" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, org_name, sort, parent_id, parent_ids, grade, creater, create_time, updater, update_time, remarks, is_del, is_real_exist
+    </sql>
+
+</mapper>

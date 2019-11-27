@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.SysUser">
+        <id column="user_id" property="userId" />
+        <result column="avatar" property="avatar" />
+        <result column="account" property="account" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="name" property="name" />
+        <result column="birthday" property="birthday" />
+        <result column="sex" property="sex" />
+        <result column="email" property="email" />
+        <result column="phone" property="phone" />
+        <result column="status" property="status" />
+        <result column="education" property="education" />
+        <result column="top_education" property="topEducation" />
+        <result column="org_name" property="orgName" />
+        <result column="org_id" property="orgId" />
+        <result column="telphone" property="telphone" />
+        <result column="age" property="age" />
+        <result column="nation" property="nation" />
+        <result column="id_card" property="idCard" />
+        <result column="politics" property="politics" />
+        <result column="postcode" property="postcode" />
+        <result column="qq" property="qq" />
+        <result column="address" property="address" />
+        <result column="college" property="college" />
+        <result column="major" property="major" />
+        <result column="rank_id" property="rankId" />
+        <result column="rank_name" property="rankName" />
+        <result column="work_status" property="workStatus" />
+        <result column="join_work_time" property="joinWorkTime" />
+        <result column="degree" property="degree" />
+        <result column="post" property="post" />
+        <result column="remark" property="remark" />
+        <result column="user_type" property="userType" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="seq" property="seq" />
+        <result column="login_failed_times" property="loginFailedTimes" />
+        <result column="recently_failed_time" property="recentlyFailedTime" />
+        <result column="leader_name" property="leaderName" />
+        <result column="real_name" property="realName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, avatar, account, password, salt, name, birthday, sex, email, phone, status, education, top_education, org_name, org_id, telphone, age, nation, id_card, politics, postcode, qq, address, college, major, rank_id, rank_name, work_status, join_work_time, degree, post, remark, user_type, last_login_time, create_time, update_time, seq, login_failed_times, recently_failed_time, leader_name, real_name
+    </sql>
+
+</mapper>

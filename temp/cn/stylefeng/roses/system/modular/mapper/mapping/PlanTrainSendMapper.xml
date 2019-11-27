@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.PlanTrainSendMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.PlanTrainSend">
+        <id column="id" property="id" />
+        <result column="plan_id" property="planId" />
+        <result column="train_plan_id" property="trainPlanId" />
+        <result column="sender_name" property="senderName" />
+        <result column="sender" property="sender" />
+        <result column="receiver_name" property="receiverName" />
+        <result column="receiver" property="receiver" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, plan_id, train_plan_id, sender_name, sender, receiver_name, receiver, create_time
+    </sql>
+
+</mapper>

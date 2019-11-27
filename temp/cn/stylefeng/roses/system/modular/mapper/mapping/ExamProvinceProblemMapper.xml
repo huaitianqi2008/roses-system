@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.ExamProvinceProblemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.ExamProvinceProblem">
+        <id column="id" property="id" />
+        <result column="exam_province_id" property="examProvinceId" />
+        <result column="problem_id" property="problemId" />
+        <result column="problem_title" property="problemTitle" />
+        <result column="problem_type" property="problemType" />
+        <result column="problem_options" property="problemOptions" />
+        <result column="true_or_false" property="trueOrFalse" />
+        <result column="student_answer" property="studentAnswer" />
+        <result column="true_answer" property="trueAnswer" />
+        <result column="problem_score" property="problemScore" />
+        <result column="seq" property="seq" />
+        <result column="get_score" property="getScore" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, exam_province_id, problem_id, problem_title, problem_type, problem_options, true_or_false, student_answer, true_answer, problem_score, seq, get_score
+    </sql>
+
+</mapper>

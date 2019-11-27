@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.TrainCoursewareMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.TrainCourseware">
+        <id column="id" property="id" />
+        <result column="class_id" property="classId" />
+        <result column="name" property="name" />
+        <result column="content" property="content" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+        <result column="is_del" property="isDel" />
+        <result column="checker" property="checker" />
+        <result column="check_status" property="checkStatus" />
+        <result column="check_content" property="checkContent" />
+        <result column="check_time" property="checkTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, class_id, name, content, creater, create_time, is_del, checker, check_status, check_content, check_time
+    </sql>
+
+</mapper>

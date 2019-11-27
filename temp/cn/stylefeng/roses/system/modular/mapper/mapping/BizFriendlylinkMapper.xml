@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.BizFriendlylinkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.BizFriendlylink">
+        <id column="id" property="id" />
+        <result column="link_type" property="linkType" />
+        <result column="link_title" property="linkTitle" />
+        <result column="link_url" property="linkUrl" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+        <result column="seq" property="seq" />
+        <result column="is_publish" property="isPublish" />
+        <result column="is_del" property="isDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, link_type, link_title, link_url, creater, create_time, seq, is_publish, is_del
+    </sql>
+
+</mapper>

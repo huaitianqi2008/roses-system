@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.QuesnBank(废弃)Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.QuesnBank(废弃)">
+        <id column="id" property="id" />
+        <result column="question_type" property="questionType" />
+        <result column="question_title" property="questionTitle" />
+        <result column="teacher" property="teacher" />
+        <result column="choice_item" property="choiceItem" />
+        <result column="answer" property="answer" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="user_id" property="userId" />
+        <result column="is_del" property="isDel" />
+        <result column="business_type" property="businessType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, question_type, question_title, teacher, choice_item, answer, status, create_time, user_id, is_del, business_type
+    </sql>
+
+</mapper>

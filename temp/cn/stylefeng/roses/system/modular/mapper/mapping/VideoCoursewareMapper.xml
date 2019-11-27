@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.VideoCoursewareMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.VideoCourseware">
+        <id column="id" property="id" />
+        <result column="course_id" property="courseId" />
+        <result column="ware_name" property="wareName" />
+        <result column="ware_desc" property="wareDesc" />
+        <result column="ware_url" property="wareUrl" />
+        <result column="ware_seconds" property="wareSeconds" />
+        <result column="create_time" property="createTime" />
+        <result column="creater" property="creater" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, course_id, ware_name, ware_desc, ware_url, ware_seconds, create_time, creater
+    </sql>
+
+</mapper>

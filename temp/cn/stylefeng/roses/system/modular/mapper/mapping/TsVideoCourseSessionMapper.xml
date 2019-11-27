@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.TsVideoCourseSessionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.TsVideoCourseSession">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="course_id" property="courseId" />
+        <result column="scoid" property="scoid" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="initialized" property="initialized" />
+        <result column="last_error_code" property="lastErrorCode" />
+        <result column="lesson_percent" property="lessonPercent" />
+        <result column="cmi_core_lesson_location" property="cmiCoreLessonLocation" />
+        <result column="cmi_core_credit" property="cmiCoreCredit" />
+        <result column="cmi_core_lesson_status" property="cmiCoreLessonStatus" />
+        <result column="cmi_core_entry" property="cmiCoreEntry" />
+        <result column="cmi_core_score_raw" property="cmiCoreScoreRaw" />
+        <result column="cmi_core_total_time" property="cmiCoreTotalTime" />
+        <result column="cmi_core_lesson_mode" property="cmiCoreLessonMode" />
+        <result column="cmi_core_exit" property="cmiCoreExit" />
+        <result column="cmi_core_session_time" property="cmiCoreSessionTime" />
+        <result column="cmi_suspend_data" property="cmiSuspendData" />
+        <result column="cmi_launch_data" property="cmiLaunchData" />
+        <result column="cmi_comments" property="cmiComments" />
+        <result column="cmi_comments_from_lms" property="cmiCommentsFromLms" />
+        <result column="learned_time_span" property="learnedTimeSpan" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, course_id, scoid, start_time, end_time, initialized, last_error_code, lesson_percent, cmi_core_lesson_location, cmi_core_credit, cmi_core_lesson_status, cmi_core_entry, cmi_core_score_raw, cmi_core_total_time, cmi_core_lesson_mode, cmi_core_exit, cmi_core_session_time, cmi_suspend_data, cmi_launch_data, cmi_comments, cmi_comments_from_lms, learned_time_span
+    </sql>
+
+</mapper>

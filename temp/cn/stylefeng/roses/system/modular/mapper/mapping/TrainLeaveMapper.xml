@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.TrainLeaveMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.TrainLeave">
+        <id column="id" property="id" />
+        <result column="class_id" property="classId" />
+        <result column="org_id" property="orgId" />
+        <result column="phone" property="phone" />
+        <result column="org_name" property="orgName" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="hours" property="hours" />
+        <result column="leave_reason" property="leaveReason" />
+        <result column="creater" property="creater" />
+        <result column="creater_name" property="createrName" />
+        <result column="file_url" property="fileUrl" />
+        <result column="img_url" property="imgUrl" />
+        <result column="is_publish" property="isPublish" />
+        <result column="checker" property="checker" />
+        <result column="apply_time" property="applyTime" />
+        <result column="check_status" property="checkStatus" />
+        <result column="check_content" property="checkContent" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, class_id, org_id, phone, org_name, begin_time, end_time, hours, leave_reason, creater, creater_name, file_url, img_url, is_publish, checker, apply_time, check_status, check_content
+    </sql>
+
+</mapper>

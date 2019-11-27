@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.SysFileinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.SysFileinfo">
+        <id column="FILE_ID" property="fileId" />
+        <result column="APP_CODE" property="appCode" />
+        <result column="FILE_URL" property="fileUrl" />
+        <result column="FILE_ORIGIN_NAME" property="fileOriginName" />
+        <result column="FILE_SUFFIX" property="fileSuffix" />
+        <result column="FILE_SIZE" property="fileSize" />
+        <result column="FILE_STORAGE_NAME" property="fileStorageName" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="UPDATE_TIME" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        FILE_ID, APP_CODE, FILE_URL, FILE_ORIGIN_NAME, FILE_SUFFIX, FILE_SIZE, FILE_STORAGE_NAME, CREATE_TIME, UPDATE_TIME
+    </sql>
+
+</mapper>

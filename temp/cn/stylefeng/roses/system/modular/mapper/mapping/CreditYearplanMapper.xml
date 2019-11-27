@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.CreditYearplanMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.CreditYearplan">
+        <id column="id" property="id" />
+        <result column="plan_year" property="planYear" />
+        <result column="online_score" property="onlineScore" />
+        <result column="offjob_score" property="offjobScore" />
+        <result column="rank_id" property="rankId" />
+        <result column="create_time" property="createTime" />
+        <result column="is_del" property="isDel" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="re_begin_time" property="reBeginTime" />
+        <result column="re_end_time" property="reEndTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, plan_year, online_score, offjob_score, rank_id, create_time, is_del, begin_time, end_time, re_begin_time, re_end_time, remark
+    </sql>
+
+</mapper>

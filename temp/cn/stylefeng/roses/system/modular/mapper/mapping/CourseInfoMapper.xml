@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.roses.system.modular.mapper.CourseInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.roses.system.modular.entity.CourseInfo">
+        <id column="id" property="id" />
+        <result column="course_name" property="courseName" />
+        <result column="couse_type" property="couseType" />
+        <result column="course_score" property="courseScore" />
+        <result column="teacher_name" property="teacherName" />
+        <result column="teacher_job" property="teacherJob" />
+        <result column="teacher_org" property="teacherOrg" />
+        <result column="course_desc" property="courseDesc" />
+        <result column="label_id" property="labelId" />
+        <result column="label_name" property="labelName" />
+        <result column="course_images" property="courseImages" />
+        <result column="video_url" property="videoUrl" />
+        <result column="video_hour" property="videoHour" />
+        <result column="video_href" property="videoHref" />
+        <result column="visited_times" property="visitedTimes" />
+        <result column="course_source" property="courseSource" />
+        <result column="get_score_way" property="getScoreWay" />
+        <result column="learn_percent" property="learnPercent" />
+        <result column="is_publish" property="isPublish" />
+        <result column="publish_time" property="publishTime" />
+        <result column="is_del" property="isDel" />
+        <result column="creater" property="creater" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, course_name, couse_type, course_score, teacher_name, teacher_job, teacher_org, course_desc, label_id, label_name, course_images, video_url, video_hour, video_href, visited_times, course_source, get_score_way, learn_percent, is_publish, publish_time, is_del, creater, create_time
+    </sql>
+
+</mapper>
